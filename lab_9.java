@@ -19,13 +19,13 @@ public class Server {
         PrintWriter output = new PrintWriter(
             socket.getOutputStream(), true);
 
-        String message = input.readLine();
+        String message = input.readLine();  // receive from client
 
         System.out.println("Received message: " + message);
 
         String upper = message.toUpperCase();
 
-        output.println(upper);
+        output.println(upper);   // sent to client
 
         System.out.println("Message sent: " + upper);
 
@@ -59,9 +59,9 @@ public class Client {
         System.out.print("Enter a message: ");
         String message = sc.nextLine();
 
-        output.println(message);
+        output.println(message);  // sent to server
 
-        String response = input.readLine();
+        String response = input.readLine();  // recieve from server
 
         System.out.println("Message from server: " + response);
 
