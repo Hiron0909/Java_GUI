@@ -1,4 +1,5 @@
 //StudentManagement.java
+//StudentManagement.java
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,10 +7,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class StudentManagement {
+public class studentmanage {
     public static void main(String[] args) throws SQLException  {
             Connection con = DriverManager.getConnection(
-                "jdbc:ucanaccess://ICE_PUST.accdb"
+                "jdbc:ucanaccess://Database1.accdb"
             );    
             Scanner sc = new Scanner(System.in);
 
@@ -37,13 +38,13 @@ public class StudentManagement {
             ps.close();
             con.close();
             sc.close();
-    }
-
+        }
+}
 
 
 // show.java
 
-  import java.sql.Connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -53,7 +54,7 @@ public class show {
     public static void main(String[] args) throws SQLException {
 
         Connection con = DriverManager.getConnection(
-            "jdbc:ucanaccess://ICE_PUST.accdb"
+            "jdbc:ucanaccess://Database1.accdb"
         );
 
         Statement st = con.createStatement();
@@ -76,3 +77,4 @@ public class show {
         con.close();
     }
 }
+
